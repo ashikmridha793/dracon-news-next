@@ -11,9 +11,9 @@ const RegisterPage = () => {
     } = useForm();
 
     const handleRegisterFunc = async (data) => {
-        console.log(data, "data")
+        // console.log(data, "data")
         const { email, name, photo, password } = data;
-        console.log(name, photo)
+        // console.log(name, photo)
 
         const { data: res, error } = await authClient.signUp.email({
             name: name,

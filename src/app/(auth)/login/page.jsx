@@ -8,7 +8,7 @@ const LoginPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const handleLoginFunc = async (data) => {
-        console.log(data)
+        console.log(data, "data")
 
         const { data: res, error } = await authClient.signIn.email({
             email: data.email, // required
