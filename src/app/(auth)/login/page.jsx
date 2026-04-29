@@ -1,4 +1,5 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -15,8 +16,8 @@ const LoginPage = () => {
             rememberMe: true,
             callbackURL: "/",
         });
+        console.log(res, error)
     }
-    console.log(errors)
 
     return (
         <div className='container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100'>
