@@ -25,7 +25,7 @@ const Navbar = () => {
                         <h2 className='font-semibold text-lg'>
                             <i>Wellcome {user?.name}</i>
                         </h2>
-                        <Image src={user?.image} alt='User abater' width={60} height={60} />
+                        <Image className='rounded-full' src={user?.image} alt='User abater' width={50} height={50} />
                         <button
                             className='btn bg-pink-700 text-white'
                             onClick={async() => await authClient.signOut()}

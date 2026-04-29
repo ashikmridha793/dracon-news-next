@@ -27,11 +27,11 @@ const RegisterPage = () => {
         })
         console.log(res, error)
 
-        if(error){
+        if (error) {
             alert(error.message)
         }
 
-        if(res){
+        if (res) {
             alert('SignUp successfull')
         }
     }
@@ -93,7 +93,7 @@ const RegisterPage = () => {
                     <fieldset className="fieldset relative">
                         <legend className="fieldset-legend">Password</legend>
                         <input
-                            type="password"
+                            type={isShowPassword ? 'text' : "password"}
                             className="input"
                             placeholder="Type your password"
                             {...register("password", {
@@ -102,10 +102,10 @@ const RegisterPage = () => {
                             })}
                         />
                         <span
-                            className='absolute right-2 top-4 cursor-pointer'
+                            className='absolute flex gap-2 items-center right-2 top-4 cursor-pointer'
                             onClick={() =>
                                 setIsShowPassword(!isShowPassword)}>
-                            {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+                            Show password{isShowPassword ? <FaEye /> : <FaEyeSlash />}
                         </span>
                         {errors.password && (
                             <p className='text-red-600'>{errors.password.message}</p>

@@ -49,10 +49,10 @@ const LoginPage = () => {
                             {...register("password", { required: `"Password fild is required"` })}
                         />
                         <span
-                            className='absolute right-2 top-4 cursor-pointer'
+                            className='absolute flex items-center gap-2 right-2 top-4 cursor-pointer'
                             onClick={() =>
                                 setIsShowPassword(!isShowPassword)}>
-                            {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+                            Show Password{isShowPassword ? <FaEye /> : <FaEyeSlash />}
                         </span>
                         {errors.password && <p className='text-red-600'>{errors.password.message}</p>}
                     </fieldset>
