@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import userAvatar from '../../assets/user.png'
 import Navlink from './Navlink';
 import { authClient } from '@/lib/auth-client';
 const Navbar = () => {

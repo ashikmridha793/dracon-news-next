@@ -1,5 +1,4 @@
-import dns from 'node:dns'
-dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
@@ -27,7 +26,7 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className='h-full antialiased'
     >
-      <body className={`${poppins.className}min-h-full flex flex-col`}>
+      <body className={`${poppins.className} min-h-full flex flex-col`}>
 
         {children}
       </body>
